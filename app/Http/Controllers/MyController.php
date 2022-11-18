@@ -7,11 +7,8 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     
-    function abc(){
-        return view ("showkat");
-    }
 
-    function abm(){
+    function welcome(){
         return view ("welcome");
     }
 
