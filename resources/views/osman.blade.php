@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Osman Easin</h1>
+    <h1>Osman</h1>
+    <a href="showkat.blade.php"> Go to showkat Page</a>
 </body>
 </html>

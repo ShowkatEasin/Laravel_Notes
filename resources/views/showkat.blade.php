@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Showkat Osman</h1>
+    <h1>Showkat</h1>
+     <a href="{{ route('abc') }}"> Go to Welcome Page</a>
 </body>
 </html>

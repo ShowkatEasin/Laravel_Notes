@@ -8,12 +8,13 @@ class MyController extends Controller
 {
     
 
-    function welcome(){
+    function abc(){
         return view ("welcome");
     }
 
-    function xyz(){
-        return view ("osman");
+
+    function abd(){
+        return view ("showkat");
     }
 
    
