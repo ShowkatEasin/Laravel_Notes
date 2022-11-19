@@ -41,6 +41,7 @@ class ProductController extends Controller
         $product -> des = $request->des;
         $product -> status = $request->status;
         $product ->save();
+        return redirect()->route("showproduct");
     }
 
     /**
@@ -51,7 +52,10 @@ class ProductController extends Controller
      */
     public function show()
     {
-       return view("backend.product.manage");
+        $products = Product::all();
+
+       return view("backend.product.manage",compact("products"));
+
     }
 
     /**
@@ -83,8 +87,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $delete = Product::find($id);
+        $delete->delete();
+        return back();
     }
 }

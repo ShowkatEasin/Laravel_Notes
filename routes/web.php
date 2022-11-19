@@ -21,4 +21,6 @@ use App\Http\Controllers\Backend\ProductController;
 
  Route::get('/showproduct',[ProductController::class,'show'])->name("showproduct");
 
+ Route::get('/delete/{id}',[ProductController::class,'delete'])->name("delete");
+
 
