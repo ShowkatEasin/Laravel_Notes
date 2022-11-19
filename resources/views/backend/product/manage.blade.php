@@ -23,7 +23,7 @@
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->des }}</td>
                 <td>@if ($product->status==1) Active @else Inactive @endif</td>
-                <td><a href="#">Edit</a></td>
+                <td><a href="{{ route('edit',$product->id) }}">Edit</a></td>
                 <td><a href="{{ route('delete',$product->id) }}">Delete</a></td>
             </tr>
             @php $sl++ @endphp

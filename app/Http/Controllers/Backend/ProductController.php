@@ -66,7 +66,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit = Product::find($id);
+        return view("backend.product.update",compact("edit"));
     }
 
     /**
@@ -75,10 +76,17 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
+     
      */
     public function update(Request $request, $id)
     {
-        //
+       $update = product::find($id);
+       $update->name = $request->name;
+       $update->des = $request->des;
+       $update->status = $request->status;
+       $update->update();
+       return redirect()->route("showproduct");
+
     }
 
     /**

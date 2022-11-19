@@ -23,4 +23,8 @@ use App\Http\Controllers\Backend\ProductController;
 
  Route::get('/delete/{id}',[ProductController::class,'delete'])->name("delete");
 
+ Route::get('/edit/{id}',[ProductController::class,'edit'])->name("edit");
+
+ Route::post('/update/{id}',[ProductController::class,'update'])->name("update");
+
 
